@@ -1,0 +1,22 @@
+.form {
+  width: 70%;
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.input {
+  width: 100%;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid grey;
+  padding-left: 8px;
+}
+
+.btn {
+  background-color: rgb(64, 86, 114);
+  color: white;
+}

@@ -1,4 +1,6 @@
-import { useEffect,useState } from 'react'
+import css from './MovieReviews.module.css'
+
+import { useEffect, useState } from 'react'
 import { useParams} from 'react-router-dom'
 import { getMovieReviews } from '../../requests/movieRequests';
 
@@ -23,14 +25,16 @@ export default function MovieReviews() {
   return (
   <div>
     {reviews.length > 0 ? 
-    (<ul>
+    (<ul className={css.reviewsList}>
     {
       reviews.map((review) => {
         return (
-          <li key={review.id}>
-            <p>Author: {review.author}</p>
-            <p>{review.content}</p>
-            <p>Date: {review.updated_at.split('T')[0]}</p>
+          <li key={review.id} >
+            <div className={css.review}>
+              <h3>Author: {review.author}</h3>
+              <p className={css.text}>{review.content}</p>
+              <h4>Date: {review.updated_at.split('T')[0]}</h4>
+            </div>
             <hr />
           </li>
         )

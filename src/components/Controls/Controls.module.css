@@ -1,0 +1,15 @@
+.btn {
+  background-color: rgb(64, 86, 114);
+  color: white;
+  height: 40px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}

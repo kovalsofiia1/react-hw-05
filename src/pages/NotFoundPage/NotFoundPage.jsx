@@ -1,9 +1,9 @@
-import React from 'react'
+import css from './NotFound.module.css'
 
 export default function NotFound() {
   return (
-    <div>
-      Not Found
+    <div className={css.container}>
+      Page Not Found!
     </div>
   )
 }

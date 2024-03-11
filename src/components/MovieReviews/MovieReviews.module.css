@@ -1,0 +1,13 @@
+.reviewsList {
+  list-style-type: none;
+}
+
+.text {
+  color: rgb(202, 207, 211);
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

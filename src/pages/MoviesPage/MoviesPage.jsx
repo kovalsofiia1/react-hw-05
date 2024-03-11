@@ -25,8 +25,8 @@ export default function MoviesPage() {
 
     if (!query) return;
     setError(false);
-    setIsLoading(false);
-    //setMovies([]);
+    setIsLoading(true);
+    
     async function getMovies() {
         try {
           const responce = await getSearchedMovies(query, page);
@@ -79,7 +79,7 @@ export default function MoviesPage() {
       {isLoading && <Loader />}
       {error && <ErrorMessage />}
       {(query && movies.length>0 && !error) &&  <MovieList movies={movies} />}
-      {(query && movies.length === 0 && !error) ?? <NoResults/>}
+      {(query && movies.length == 0 && !error) && <NoResults/>}
       
       {query && movies.length>0 && <Controls onPrev={handlePrev} onNext={handleNext} isFirst={isFirst} isLast={isLast} />}
     </div>

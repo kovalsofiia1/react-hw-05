@@ -1,0 +1,28 @@
+.filmsList {
+  list-style-type: none;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filmCard {
+  background-color: aliceblue;
+  width: 250px;
+  height: 190px;
+
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.poster {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.imgCont {
+  background-color: #657f96;
+  border-radius: 4px;
+  width: 100%;
+  height: 136px;
+}

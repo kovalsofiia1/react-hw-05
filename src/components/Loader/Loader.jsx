@@ -1,13 +1,14 @@
 import { BallTriangle } from 'react-loader-spinner';
+import css from './Loader.module.css'
 
 export default function Loader() {
   return (
-    <div>
+    <div className={css.loader}>
         <BallTriangle
-            height={100}
-            width={100}
+            height={50}
+            width={50}
             radius={5}
-            color="#4fa94d"
+            color="rgb(48, 66, 90)"
             ariaLabel="ball-triangle-loading"
             wrapperStyle={{}}
             wrapperClass=""

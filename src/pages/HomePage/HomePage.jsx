@@ -1,8 +1,10 @@
-import {useEffect, useState} from 'react'
+import css from './HomePage.module.css'
+import { useEffect, useState } from 'react'
 import { getTrendingMovies } from '../../requests/movieRequests';
 import MovieList from '../../components/MovieList/MovieList';
 import Loader from '../../components/Loader/Loader';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
+
 
 export default function HomePage() {
   const [trending, setTrending] = useState([]);
@@ -11,7 +13,7 @@ export default function HomePage() {
   
   useEffect(() => {
     setError(false);
-    setIsLoading(false);
+    setIsLoading(true);
     const makeRequests = async () => {
       try {
         const responce = await getTrendingMovies();
@@ -32,7 +34,7 @@ export default function HomePage() {
  
   return (
     <div>
-      <h2>Trending today</h2>
+      <h2 className={css.trending}>Trending today</h2>
       {isLoading && <Loader />}
       {error && <ErrorMessage/> }
       {!error && !isLoading && <MovieList movies={trending} />}
