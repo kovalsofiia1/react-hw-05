@@ -30,7 +30,7 @@ export default function MoviePage() {
     <div>
       <Link to={backLinkRef.current}>Go back</Link>
       <div>
-        {details?.backdrop_path && <img src={`https://image.tmdb.org/t/p/w500${details?.backdrop_path}`} alt={details.tittle + ' poster'} />}
+        {details?.poster_path && <img src={`https://image.tmdb.org/t/p/w500${details?.poster_path}`} alt={details.tittle + ' poster'} />}
         </div>
       <p>{details.title}</p>
       <p>User score: {parseInt(parseFloat(Number(details.vote_average))*10)}%</p>

@@ -1,8 +1,9 @@
 import './App.css'
 import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
-import { BallTriangle } from 'react-loader-spinner';
+
 import Navigation from '../Navigation/Navigation'
+import Loader from '../Loader/Loader';
 
 
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
@@ -13,20 +14,10 @@ const MovieCast = lazy(() => import('../MovieCast/MovieCast'));
 const MovieReviews = lazy(() => import('../MovieReviews/MovieReviews'));
 
 export default function App() {
- 
   return (
     <>
       <Navigation />
-       <Suspense fallback={<BallTriangle
-                              height={100}
-                              width={100}
-                              radius={5}
-                              color="#4fa94d"
-                              ariaLabel="ball-triangle-loading"
-                              wrapperStyle={{}}
-                              wrapperClass=""
-                              visible={true}
-                              />}>
+      <Suspense fallback={ <Loader/>}>
        <Routes>
                <Route path='/' element={<HomePage  />} />
                <Route path='/movies' element={<MoviesPage />} />
